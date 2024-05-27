@@ -1,8 +1,8 @@
 # GymManager
 
-## how to run this project
+## How to run this project
 
-install dotnet using winget
+Install dotnet using winget
 
 ```
 dotnet nuget add source --name nuget.org https://api.nuget.org/v3/index.json
@@ -10,3 +10,11 @@ dotnet restore
 
 dotnet ef database update
 ```
+Run the project
+
+```
+dotnet run
+```
+Make sure conneciton string is valid in `GymManager.Web/.appsettings.json`
+
+Grab the default User & Password in ``GymManager.Web\Controllers\AccountController.cs:26``
