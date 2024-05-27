@@ -1,0 +1,32 @@
+﻿@model GymManager.Web.Models.MembershipRenewal
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section HeaderRight{
+<form class="d-flex">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+}
+
+<div class="container">
+    <h1 class="mt-5">Renew Memberships</h1>
+    
+    <form asp-action="Search">
+        <div class="row">
+            <div class="mb-3">
+                <label asp-for="SearchValue" class="form-label">Name</label>
+                <input type="text" class="form-control" asp-for="SearchValue">
+                <span asp-validation-for="SearchValue" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary mb-3">Search</button>
+        </div>
+    </form>
+    @if(Model != null) {
+        @await Html.PartialAsync("~/Views/Shared/_MembershipMemberList.cshtml", Model.Members)
+    }
+</div>

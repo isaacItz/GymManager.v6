@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<GymManager.Core.Entities.EquipmentType>
+@{
+
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var equipment in Model)
+        {
+            <tr>
+                <th scope="row">@equipment.Name</th>
+                <td>@equipment.Description</td>
+                <td>
+                    <a asp-action="Edit" asp-route-memberId="@equipment.Id" class="btn btn-outline-info">Edit</a>
+                </td>
+                <td>
+                    <a asp-action="Delete" asp-route-memberId="@equipment.Id" class="btn btn-outline-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,77 @@
+﻿@using GymManager.Web.Views.Shared.Components.AppMenu
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+    More test content
+*@
+@{
+  
+}
+
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>@ViewBag.Title</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="~/bootstrap/css/bootstrap.min.css" />
+
+    <!-- My own styles -->
+    <link rel="stylesheet" type="text/css" href="~/css/custom.css" />
+
+    <!-- Favicons -->
+    <meta name="theme-color" content="#7952b3">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @@media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        main > .container {
+            padding: 60px 15px 0;
+        }
+    </style>
+    @RenderSection("Head", false)
+</head>
+<body class="d-flex flex-column h-100">
+
+    <header>
+    </header>
+
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+        @RenderBody()
+    </main>
+
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">Place sticky footer content here.</span>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- BS JavaScript -->
+    <script src="~/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="~/js/moment.js"></script>
+
+    @RenderSection("Scripts", false)
+</body>
+</html>
